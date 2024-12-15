@@ -11,14 +11,14 @@ function quickSort(arr) {
     }
 
     const pivot = arr[arr.length - 1];  // Pivô é o último elemento
-    const left = [];
-    const right = [];
+    const left = [];//cria uma lista p os elementos da esquerda
+    const right = [];//cria uma lista p os elementos da esquerda
 
     for (let i = 0; i < arr.length - 1; i++) {
         if (arr[i] < pivot) {
-            left.push(arr[i]);
+            left.push(arr[i]);//empurra os elementos menores q o pivo pra esquerda
         } else {
-            right.push(arr[i]);
+            right.push(arr[i]);//empurra os elementos maiores q o pivo pra direita
         }
     }
 

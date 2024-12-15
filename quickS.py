@@ -6,13 +6,13 @@ import os
 # Função de ordenação Quick Sort
 def quick_sort(arr):
     if len(arr) <= 1:
-        return arr  # Caso base, a lista com um ou nenhum elemento já está ordenada
+        return arr  #se tiver só um ou nenhum elemento, fechô
     
-    pivot = arr[-1]  # Escolher o último elemento como pivô
-    left = [x for x in arr[:-1] if x < pivot]  # Elementos menores que o pivô
-    right = [x for x in arr[:-1] if x >= pivot]  # Elementos maiores ou iguais ao pivô
+    pivot = arr[-1]  #o último elemento como pivô
+    left = [x for x in arr[:-1] if x < pivot]  #menores que o pivô
+    right = [x for x in arr[:-1] if x >= pivot]  #maiores ou iguais ao pivô
 
-    # Recursão para as sublistas à esquerda e à direita do pivô
+    #recursividade
     return quick_sort(left) + [pivot] + quick_sort(right)
 
 # Lê o arquivo arq.txt e converte o conteúdo em uma lista de números
